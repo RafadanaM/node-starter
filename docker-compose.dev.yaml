@@ -1,0 +1,12 @@
+services:
+  node:
+    container_name: node-ts-dev
+    build: 
+      context: .
+      target: dev
+    env_file:
+      - .env.development
+    ports: 
+      - 5000:5000
+    volumes:
+      - ./src:/usr/src/app/src

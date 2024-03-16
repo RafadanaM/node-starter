@@ -1,0 +1,10 @@
+services:
+  node:
+    container_name: node-ts-prod
+    build: 
+      context: .
+      target: prod
+    env_file:
+      - .env.production
+    ports: 
+      - 5001:5001
